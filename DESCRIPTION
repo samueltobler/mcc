@@ -1,0 +1,12 @@
+Package: mcc
+Type: Package
+Title: Metacognitive Calibration Analysis
+Version: 0.1.0
+Author: Samuel Tobler
+Description: An R-package for metacognitive calibration analysis and visualization
+License: cc-by-nc-sa
+Maintainer: Samuel Tobler <hi@samueltobler.ch>
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
