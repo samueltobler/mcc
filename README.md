@@ -11,7 +11,7 @@
 
 The **`mcc`** package allows calculating and visualizing metacognitive performance judgement data. For a theoretical elaboration of the methodological approach and for the results from an empirical application, please read the following paper: 
 
-**Tobler, S. & Kapur, M. (2023). Metacognitive calibration: a methodological expansion and empirical application.**
+**Tobler, S. & Kapur, M. (2023). Metacognitive calibration: a methodological expansion and empirical application. https://doi.org/10.3929/ethz-b-000600979**
 
 In this paper, the following functions are described: 
 
@@ -118,7 +118,7 @@ library(mcc)
 
 To cite the **`mcc`**-package in publications, please use:
 
-**Tobler, S. & Kapur, M. (2023). Metacognitive calibration: a methodological expansion and empirical application. [Accepted for publication in the Proceedings of the 17th International Conference of the Learning Sciences (ICLS 2023). Montréal, Canada.]**
+**Tobler, S. & Kapur, M. (2023). Metacognitive calibration: a methodological expansion and empirical application. [Accepted for publication in the Proceedings of the 17th International Conference of the Learning Sciences (ICLS 2023). Montréal, Canada.]. https://doi.org/10.3929/ethz-b-000600979**
 
 
 
