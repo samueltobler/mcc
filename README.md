@@ -118,7 +118,7 @@ library(mcc)
 
 To cite the **`mcc`**-package in publications, please use:
 
-**Tobler, S. & Kapur, M. (2023). Metacognitive calibration: a methodological expansion and empirical application. [Accepted for publication in the Proceedings of the 17th International Conference of the Learning Sciences (ICLS 2023). Montréal, Canada.]. https://doi.org/10.3929/ethz-b-000600979**
+**Tobler, S. & Kapur, M. (2023). Metacognitive calibration: a methodological expansion and empirical application. Proceedings of the 17th International Conference of the Learning Sciences (ICLS 2023). Montréal, Canada. https://doi.org/10.3929/ethz-b-000600979**
 
 
 
