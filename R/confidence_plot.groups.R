@@ -1,4 +1,4 @@
-overconfidence_plot.groups <- function(data, color = blue, plot = "jitter", colorbg = blue202, name = "", export = FALSE, group) {
+confidence_plot.groups <- function(data, color = blue, plot = "jitter", colorbg = blue202, name = "", export = FALSE, group) {
   
   require(ggplot2)
   require(ggpubr)
