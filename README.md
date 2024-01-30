@@ -9,7 +9,7 @@
 ## Introduction
 <hr>
 
-The **`mcc`** package allows calculating and visualizing metacognitive performance judgement data. For a theoretical elaboration of the methodological approach and for the results from an empirical application, please read the following paper: 
+The **`mcc`** package allows calculating and visualizing metacognitive performance judgment data. For a theoretical elaboration of the methodological approach and for the results from an empirical application, please read the following paper: 
 
 **Tobler, S. & Kapur, M. (2023). Metacognitive calibration: a methodological expansion and empirical application. https://doi.org/10.3929/ethz-b-000600979**
 
@@ -20,7 +20,7 @@ In this paper, the following functions are described:
 - Calibration accuracy
 - Miscalibration
 
-These functions can be applied on performance-judgement-based on 4-point Likert scale data (yes / rather yes / rather no / no) or on performance-judgement-based on binary data (yes / no). 
+These functions can be applied to performance judgment based on 4-point Likert scale data (yes / rather yes / rather no / no) or on performance judgment based on binary data (yes / no). 
 
 Additionally, commonly used functions in the literature for calibration accuracy are available as well. These correspond to: 
 
@@ -33,7 +33,7 @@ Additionally, commonly used functions in the literature for calibration accuracy
 To use the functions, the data need to be prepared. Therefore, the functions require 
 
 1.  a data frame with the performance data (participants x questions), in which questions are rated 1 if correct and 0 if incorrect
-2.  a data frame with the performance-judgement values, either numerically designated (e.g., 0-3) or alphabetical with the already correctly assigned letters (see Table 1 in the paper). 
+2. a data frame with the performance-judgment values, either numerically designated (e.g., 0-3) or alphabetically with the already correctly assigned letters (see Table 1 in the paper). 
 
 The assigned letters in the data preparation correspond to those depicted in Table 1 of the paper mentioned above. A step-by-step instruction in R is shown below. 
 
@@ -42,15 +42,15 @@ The assigned letters in the data preparation correspond to those depicted in Tab
 
 #### Data Preparation
 
-Ideally, the performance-judgement is assessed by using a 4-point Likert scale. In case the performance judgement has been assessed on a binary scale, you need to first transform them by using the `btof`-function. This function only works if the confidence judgements are already transformed to the letters _a_ to _d_. 
+Ideally, the performance judgment is assessed using a 4-point Likert scale. In case the performance judgment has been assessed on a binary scale, you need to first transform them by using the `btof`-function. This function only works if the confidence judgments are already transformed to the letters _a_ to _d_. 
 
--   `btof`: To transform the **binary** judgement data that they can be used in the various functions. This step is necessary for all functions described in here beside _d'_, _gamma_, or _G_-index.
+-   `btof`: To transform the **binary** judgment data so that they can be used in the various functions. This step is necessary for all functions described here beside _d'_, _gamma_, or _G_-index.
 
-In case the judgement data is assessed on a 4-point Likert scale and the values are numerical, step 1 and 2 have to be performed. If the values are already transformed to letters according to table 1 in the paper, step 1 can be skipped. 
+In case the judgment data is assessed on a 4-point Likert scale, and the values are numerical, steps 1 and 2 have to be performed. If the values are already transformed into letters according to Table 1 in the paper, step 1 can be skipped. 
 
 **Step 1**: Transforming Likert data to letters a-h
 
--   `letterassignment`: requires the input of performance and judgement data
+-   `letterassignment`: requires the input of performance and judgment data
 
 **Step 2**: Count different letters per participant
 
@@ -66,24 +66,32 @@ In case you need to use the functions _d'_, _gamma_, or _G_-index, but you colle
 
 To analyze overconfidence, underconfidence, calibration accuracy, and miscalibration, the following functions can be used: 
 
--   `overconfidence`: requires a data with the counted letters per participant (i.e., the result from the `participant_summary`-function)
--   `underconfidence`: requires a data with the counted letters per participant (i.e., the result from the `participant_summary`-function)
--   `calibrationaccuracy`: requires a data with the counted letters per participant (i.e., the result from the `participant_summary`-function)
--   `miscalibration`: requires a data with the counted letters per participant (i.e., the result from the `participant_summary`-function)
+-   `overconfidence`: requires data with the counted letters per participant (i.e., the result from the `participant_summary`-function)
+-   `underconfidence`: requires data with the counted letters per participant (i.e., the result from the `participant_summary`-function)
+-   `calibrationaccuracy`: requires data with the counted letters per participant (i.e., the result from the `participant_summary`-function)
+-   `miscalibration`: requires data with the counted letters per participant (i.e., the result from the `participant_summary`-function)
 
-Alternatively, one can directly use the function `conf.stats` to skip all these steps and directly get the summary. This function works only when the judgement data has been assessed on a 4-point Likert scale. 
+#### Shortcut Function
+Alternatively, one can use the function `conf.stats` to skip all these steps and get the summary directly. This function works only when the judgment data has been assessed on a 4-point Likert scale. 
 
--   `conf.stats`: requires performance values (0 / 1), and judgement values (on a numerical scale)
+-   `conf.stats`: requires performance values (0 / 1), and judgment values (on a numerical scale)
 
 <br>
 
 #### Visualization
 
-To visualize the findings, one can either look at the confidence accuracy ratings and the miscalibration individually, or directly visualize both in one plot. The functions to do so are. 
+To visualize the findings, one can either look at the confidence accuracy ratings and the miscalibration individually or directly visualize both in one plot. The functions to do so are. 
 
 - `confidence_plot`: requires the calibration accuracy values
 - `miscalibration_plot`: requires the miscalibration values
-- `combined_plot`: requires both, calibration and miscalibration values 
+- `combined_plot`: requires both calibration and miscalibration values
+
+Additionally, the following functions can be used to compare two or more groups visually: 
+
+- `confidence_plot.groups`: requires additionally a group value
+- `miscalibration_plot.group`: requires additionally a group value
+- `overconfidence_plot.groups`: to visualize overconfidence values in different groups
+- `underconfidence_plot.groups`: to visualize underconfidence values in different groups
 
 <br>
 
